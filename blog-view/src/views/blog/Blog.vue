@@ -202,7 +202,9 @@
 		  formatCodeHighlight() {
 			//忽略mermaid图表
 			var elements = document.querySelectorAll('code[class^="language-"]:not(.language-mermaid)');
+			//添加行号
 			for (var element of elements) {
+				element.classList.add('line-numbers')
 				Prism.highlightElement(element, false);
 			}
 		  },
